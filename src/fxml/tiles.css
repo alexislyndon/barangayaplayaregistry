@@ -1,0 +1,9 @@
+.tile {
+  -fx-background-color:transparent;
+  -fx-border-color:red;
+}
+
+.tile:hover {
+  -fx-background-color:#dae7f3;
+  -fx-padding:5 5 5 5;
+}

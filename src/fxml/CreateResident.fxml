@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<TitledPane prefHeight="405.0" prefWidth="642.0" text="New Resident" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barangay.CreateResidentController">
+   <content>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Personal Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="13.0" layoutY="14.0" prefWidth="614.0">
+                           <children>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="28.0" prefWidth="608.0">
+                                 <children>
+                                    <Label fx:id="lbllast" prefHeight="17.0" prefWidth="166.0" text="Last Name">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lblfirst" prefHeight="17.0" prefWidth="200.0" text="First Name">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lblmiddle" prefHeight="17.0" prefWidth="134.0" text="Middle Name">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lblsuffix" text="Suffix">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="25.0" prefWidth="614.0">
+                                 <children>
+                                    <TextField fx:id="lastName" prefHeight="25.0" prefWidth="165.0" promptText="Dela Cruz">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="firstName" prefHeight="25.0" prefWidth="200.0" promptText="Juanito">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="middleName" maxWidth="300.0" prefHeight="25.0" prefWidth="134.0" promptText="Reyes">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="suffix" maxWidth="50.0" promptText="Jr.">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="13.0" layoutY="94.0" prefHeight="25.0" prefWidth="616.0">
+                           <children>
+                              <ChoiceBox fx:id="choiceSex" prefHeight="25.0" prefWidth="62.0">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Male" />
+                                            <String fx:value="Female" />
+                                            <String fx:value="Other" />
+                                      </FXCollections>
+                                  </items>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="choiceCivil" prefHeight="25.0" prefWidth="109.0">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Single" />
+                                            <String fx:value="Maried" />
+                                            <String fx:value="Widow/Widower" />
+                                      </FXCollections>
+                                  </items>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <DatePicker fx:id="birthdate" promptText="mm/dd/yyyy">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <TextField fx:id="birthplace" promptText="enter Birthplace" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" layoutX="13.0" layoutY="67.0" prefHeight="28.0" prefWidth="608.0">
+                           <children>
+                              <Label fx:id="lblsex" prefHeight="17.0" prefWidth="61.0" text="Sex">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblcivil" prefHeight="17.0" prefWidth="110.0" text="Civil Status">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblbirth" prefHeight="17.0" prefWidth="155.0" text="Birthdate">
+                                 <HBox.margin>
+                                    <Insets right="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblbirthplace" prefHeight="17.0" prefWidth="110.0" text="Birthplace" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="12.0" layoutY="172.0">
+                           <children>
+                              <TextField fx:id="height" prefHeight="25.0" prefWidth="82.0" promptText="Height in cm">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField fx:id="weight" prefHeight="25.0" prefWidth="83.0" promptText="Weight in kg">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField fx:id="bloodtype" prefHeight="25.0" prefWidth="105.0" promptText="enter bloodtype">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField fx:id="citizenship" promptText="enter Citizenship" text="Filipino">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField fx:id="occupation" promptText="enter occupation">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="12.0" layoutY="153.0" prefHeight="19.0" prefWidth="598.0">
+                           <children>
+                              <Label fx:id="lblheight" prefHeight="17.0" prefWidth="81.0" text="Height">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblwight" prefHeight="17.0" prefWidth="85.0" text="Weight">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblblood" prefHeight="17.0" prefWidth="107.0" text="Blood Type">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblcitizenship" prefHeight="17.0" prefWidth="147.0" text="Citizenship">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lbloccupation" text="Occupation">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="alias" layoutX="14.0" layoutY="228.0" promptText="enter Alias / nickname" />
+                        <Label fx:id="lblalias" layoutX="17.0" layoutY="211.0" text="Alias" />
+                        <TextField fx:id="idenmarks" layoutX="179.0" layoutY="228.0" promptText="e.g. birthmark or mole" />
+                        <Label fx:id="lblidenmarks" layoutX="179.0" layoutY="211.0" text="Identifying marks" />
+                        <ComboBox fx:id="religion" editable="true" layoutX="360.0" layoutY="228.0" prefWidth="150.0" promptText="enter religion">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                      <String fx:value="Roman Catholic" />
+                                      <String fx:value="Islam" />
+                                      <String fx:value="Born Again" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label fx:id="lblreligion" layoutX="360.0" layoutY="211.0" text="Religion" />
+                        <VBox layoutX="28.0" layoutY="314.0" prefHeight="105.0" prefWidth="232.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="lblhouse" prefHeight="25.0" prefWidth="53.0" text="House #">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="housenumber" promptText="enter house number">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="lblstreet" prefHeight="25.0" prefWidth="55.0" text="Street">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="street" promptText="enter street">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="340.0" layoutY="310.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <CheckBox fx:id="pwd" mnemonicParsing="false" onAction="#pwdselected" prefHeight="26.0" prefWidth="63.0" text="PWD">
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <TextField fx:id="defect" disable="true" promptText="enter defect ">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox fx:id="pregnant" mnemonicParsing="false" onAction="#pregnantselected" prefHeight="25.0" prefWidth="73.0" text="Pregnant">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <DatePicker fx:id="duedate" disable="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <CheckBox fx:id="soloparent" mnemonicParsing="false" text="Solo Parent">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnsave" layoutX="569.0" layoutY="411.0" mnemonicParsing="false" onAction="#saveresident" text="SAVE!" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Family Background">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="240.0" layoutY="43.0" text="No. of Children" />
+                        <Label layoutX="41.0" layoutY="43.0" text="Spouse" />
+                        <TextField layoutX="41.0" layoutY="60.0" prefHeight="25.0" prefWidth="171.0" promptText="enter name of Spouse" />
+                        <TextField layoutX="240.0" layoutY="60.0" prefHeight="25.0" prefWidth="146.0" promptText="enter number of children" />
+                        <Pane disable="true" layoutX="29.0" layoutY="92.0" prefHeight="323.0" prefWidth="420.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="12.0">
+                                 <children>
+                                    <TextField fx:id="child1">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child2" prefHeight="25.0" prefWidth="75.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child3">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child4">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child5">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child6">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child7">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child8">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child9">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child10">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="184.0" layoutY="12.0">
+                                 <children>
+                                    <TextField fx:id="child11">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child12" prefHeight="25.0" prefWidth="75.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child13">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child14">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="child15">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Label layoutX="409.0" layoutY="109.0" text="Mother" />
+                        <TextField layoutX="409.0" layoutY="126.0" prefHeight="25.0" prefWidth="146.0" promptText="enter Mother's name" />
+                        <Label layoutX="409.0" layoutY="41.0" text="Father" />
+                        <TextField layoutX="409.0" layoutY="58.0" prefHeight="25.0" prefWidth="146.0" promptText="enter Father's name" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Related Info &amp; Contact">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="28.0" text="Highest Educational Attainment" />
+                        <Label layoutX="199.0" layoutY="92.0" text="PhilHealth#" />
+                        <Label layoutX="24.0" layoutY="92.0" text="SSS #" />
+                        <ComboBox layoutX="24.0" layoutY="45.0" prefWidth="150.0" promptText="choose" />
+                        <TextField layoutX="24.0" layoutY="109.0" promptText="34543627541" />
+                        <TextField layoutX="199.0" layoutY="109.0" promptText="234698234" />
+                        <CheckBox layoutX="225.0" layoutY="49.0" mnemonicParsing="false" text="Voter?" />
+                        <TextField layoutX="281.0" layoutY="45.0" promptText="27b" />
+                        <Label layoutX="281.0" layoutY="28.0" text="Precint" />
+                        <TextField layoutX="24.0" layoutY="168.0" promptText="mm/dd/yyyy" />
+                        <Label layoutX="25.0" layoutY="151.0" text="Date resided in barangay" />
+                        <TextField layoutX="198.0" layoutY="168.0" prefHeight="25.0" prefWidth="181.0" promptText="put 'head' if Head" />
+                        <Label layoutX="197.0" layoutY="151.0" text="Relationship to household head" />
+                        <CheckBox layoutX="477.0" layoutY="49.0" mnemonicParsing="false" text="Electricity?" />
+                        <TextField layoutX="32.0" layoutY="270.0" promptText="email@gmail.com" />
+                        <TextField layoutX="206.0" layoutY="270.0" promptText="09193232413" />
+                        <TextField layoutX="32.0" layoutY="321.0" prefHeight="25.0" prefWidth="166.0" promptText="enter contact number" />
+                        <Label layoutX="32.0" layoutY="253.0" text="email" />
+                        <Label layoutX="209.0" layoutY="253.0" text="Contact #" />
+                        <Label layoutX="30.0" layoutY="304.0" text="Incase of Emergency Contact:" />
+                        <Label layoutX="33.0" layoutY="346.0" text="Relationship" />
+                        <TextField layoutX="32.0" layoutY="363.0" promptText="ex. wife" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Other">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea layoutX="15.0" layoutY="299.0" prefHeight="138.0" prefWidth="610.0" />
+                        <Label layoutX="579.0" layoutY="282.0" text="Remarks" />
+                        <TextField layoutX="15.0" layoutY="28.0" />
+                        <TextField layoutX="15.0" layoutY="67.0" />
+                        <Label layoutX="15.0" layoutY="14.0" text="Latitude" />
+                        <Label layoutX="15.0" layoutY="53.0" text="Longitude" />
+                        <VBox layoutX="23.0" layoutY="160.0">
+                           <children>
+                              <Label text="Type of Latrine" />
+                              <CheckBox mnemonicParsing="false" text="Water Sealed">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Antipolo">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Others">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="No Latrine" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="125.0" layoutY="160.0">
+                           <children>
+                              <Label text="Garbage Management" />
+                              <CheckBox mnemonicParsing="false" text="Burned">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Burried">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Recycled">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Others" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="264.0" layoutY="160.0">
+                           <children>
+                              <Label text="House Structure" />
+                              <CheckBox mnemonicParsing="false" text="Concrete">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Semi-Concrete">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Wood / Light Materials">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Cartoon, Paper, Plastic/Salvaged" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="478.0" layoutY="143.0">
+                           <children>
+                              <Label text="House Ownership" />
+                              <CheckBox mnemonicParsing="false" text="Owned">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Rented">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Shared with Owner">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Shared with renter">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Informal Settler Family" />
+                           </children>
+                        </VBox>
+                        <HBox layoutX="351.0" layoutY="29.0" prefHeight="83.0" prefWidth="254.0">
+                           <children>
+                              <VBox prefHeight="83.0" prefWidth="118.0">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" text="Earthquake">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="Ground Rupture">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="Ground Shaking">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="Liquefaction" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="96.0" prefWidth="100.0">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" text="Rain-induced landslide">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="Flash Flood">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="Storm Surge">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="Tsunami" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="351.0" layoutY="14.0" text="Type of Hazard" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </content>
+</TitledPane>

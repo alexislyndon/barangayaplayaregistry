@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barangay.LoginController">
+   <children>
+      <TextField fx:id="username" layoutX="89.0" layoutY="63.0" promptText="enter username" />
+      <PasswordField fx:id="password" layoutX="89.0" layoutY="117.0" onAction="#handleLogin" promptText="enter password" />
+      <Button fx:id="button" defaultButton="true" layoutX="137.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
+      <Label layoutX="89.0" layoutY="46.0" text="Username" />
+      <Label layoutX="89.0" layoutY="100.0" text="Password" />
+      <Label fx:id="errorMessage" layoutX="72.0" layoutY="161.0" prefHeight="17.0" prefWidth="177.0" textAlignment="CENTER" textFill="RED" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,8 @@
+.tile {
+  -fx-background-color:transparent;
+  -fx-background-color:gray
+}
+
+.tile:hover {
+  -fx-background-color:#dae7f3;
+}

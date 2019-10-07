@@ -1,0 +1,21 @@
+.tile {
+  background: #e80000;
+  background-image: -webkit-linear-gradient(top, #e80000, #e5f5ff);
+  background-image: -moz-linear-gradient(top, #e80000, #e5f5ff);
+  background-image: -ms-linear-gradient(top, #e80000, #e5f5ff);
+  background-image: -o-linear-gradient(top, #e80000, #e5f5ff);
+  background-image: linear-gradient(to bottom, #e80000, #e5f5ff);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.tile:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
