@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -7,98 +9,132 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barangay.CertificateController">
+<AnchorPane id="AnchorPane" prefHeight="446.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.CertificateController">
    <children>
-      <TitledPane animated="false" prefHeight="469.0" prefWidth="417.0" style="-fx-background-color: #4d4d4d;" text="Barangay Certificate" />
-      <Pane prefHeight="483.0" prefWidth="417.0">
+      <TitledPane animated="false" prefHeight="444.0" prefWidth="417.0" style="-fx-background-color: #4d4d4d;" text="Barangay Certificate" />
+      <Pane prefHeight="444.0" prefWidth="417.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="27.0" prefHeight="63.0" prefWidth="417.0" text="Issuing Barangay Certificate">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="27.0" prefHeight="63.0" prefWidth="417.0" text="Barangay Certificate">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <VBox layoutX="30.0" layoutY="134.0" prefHeight="142.0" prefWidth="113.0">
+            <VBox layoutX="50.0" layoutY="135.0" prefHeight="79.0" prefWidth="113.0">
                <children>
                   <Label prefHeight="34.0" prefWidth="113.0" text="Certificate Type:">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin></Label>
-                  <Label prefHeight="34.0" prefWidth="113.0" text="Certificate Number:">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
-                  </Label>
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
                   <Label layoutX="10.0" layoutY="78.0" prefHeight="34.0" prefWidth="113.0" text="Signed by:">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
                   </Label>
                </children>
             </VBox>
             <VBox layoutX="169.0" layoutY="167.0" prefHeight="79.0" prefWidth="223.0" />
-            <Line endX="403.0" layoutX="13.0" layoutY="288.0" startX="-14.0" stroke="#4d4d4d" />
-            <VBox layoutX="169.0" layoutY="134.0" prefHeight="142.0" prefWidth="223.0">
+            <Line endX="403.0" layoutX="13.0" layoutY="241.0" startX="-14.0" stroke="#4d4d4d" />
+            <VBox layoutX="169.0" layoutY="134.0" prefHeight="96.0" prefWidth="223.0">
                <children>
-                  <ComboBox fx:id="type" editable="true" prefHeight="34.0" prefWidth="222.0">
+                  <ComboBox fx:id="type" editable="true" prefHeight="34.0" prefWidth="222.0" promptText="enter certificate type">
+                      <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Residency" />
+                                      </FXCollections>
+                                  </items>
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
                   </ComboBox>
-                  <TextField fx:id="certnum" prefHeight="34.0" prefWidth="212.0">
+                  <HBox prefHeight="34.0" prefWidth="68.0">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="signedby" layoutX="10.0" layoutY="88.0" prefHeight="34.0" prefWidth="212.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
+                     <children>
+                        <ComboBox fx:id="signatory" prefHeight="34.0" prefWidth="225.0" promptText="choose signatory">
+                            <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Captain" />
+                                            <String fx:value="Kagawad 1" />
+                                            <String fx:value="Kagawad 2" />
+                                            <String fx:value="Kagawad 3" />
+                                            <String fx:value="Kagawad 4" />
+                                            <String fx:value="Kagawad 5" />
+                                            <String fx:value="Kagawad 6" />
+                                            <String fx:value="Kagawad 7" />
+                                      </FXCollections>
+                                  </items>
+                        </ComboBox>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <Line endX="403.0" layoutX="14.0" layoutY="568.0" startX="-14.0" stroke="#4d4d4d" />
-            <VBox layoutX="27.0" layoutY="337.0" prefHeight="96.0" prefWidth="113.0">
+            <VBox layoutX="55.0" layoutY="290.0" prefHeight="96.0" prefWidth="113.0">
                <children>
                   <Label prefHeight="34.0" prefWidth="113.0" text="Applicant:">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
                   </Label>
                   <Label layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="113.0" text="Purpose:">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
                   </Label>
                </children>
                <padding>
                   <Insets bottom="5.0" top="5.0" />
                </padding>
             </VBox>
-            <Label layoutX="30.0" layoutY="90.0" prefHeight="34.0" prefWidth="113.0" text="Certificate Details" underline="true" />
-            <Label layoutX="30.0" layoutY="296.0" prefHeight="34.0" prefWidth="113.0" text="Applicant Details" underline="true" />
-            <VBox layoutX="166.0" layoutY="337.0" prefHeight="96.0" prefWidth="223.0">
+            <Label layoutX="30.0" layoutY="90.0" prefHeight="34.0" prefWidth="153.0" text="Certificate Details" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="30.0" layoutY="254.0" prefHeight="34.0" prefWidth="153.0" text="Applicant Details" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <VBox layoutX="166.0" layoutY="295.0" prefHeight="96.0" prefWidth="223.0">
                <children>
-                  <TextField fx:id="applicant" editable="false" layoutX="10.0" layoutY="88.0" prefHeight="34.0" prefWidth="212.0">
+                  <TextField fx:id="applicant" editable="false" layoutX="10.0" layoutY="88.0" prefHeight="34.0" prefWidth="212.0" promptText="Applicant Name will appear here">
                      <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
+                        <Insets bottom="10.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="purpose" layoutX="10.0" layoutY="122.0" prefHeight="38.0" prefWidth="223.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
+                  <ComboBox fx:id="purpose" editable="true" prefHeight="33.0" prefWidth="256.0" promptText="enter purpose">
+                      <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Employment" />
+                                            <String fx:value="Bank Requirement" />
+                                            <String fx:value="School" />
+                                            <String fx:value="Business" />
+                                      </FXCollections>
+                                  </items>
+                  </ComboBox>
                </children>
             </VBox>
-            <Label layoutX="166.0" layoutY="321.0" text="Applicant id:" />
-            <Text fx:id="id" layoutX="248.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" />
-            <Button layoutX="355.0" layoutY="444.0" mnemonicParsing="false" onAction="#savecert" text="SAVE!" />
+            <Label layoutX="281.0" layoutY="271.0" text="Applicant id:" textFill="RED" />
+            <Button layoutX="338.0" layoutY="404.0" mnemonicParsing="false" onAction="#savecert" prefHeight="32.0" prefWidth="64.0" text="SAVE!" />
+            <Label fx:id="id" layoutX="365.0" layoutY="271.0" text="Label" textFill="RED" />
          </children>
       </Pane>
    </children>

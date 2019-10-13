@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.collections.FXCollections?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barangay.AddHHController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.AddHHController">
    <children>
       <TextField fx:id="lastname" layoutX="17.0" layoutY="113.0" />
       <Button defaultButton="true" layoutX="175.0" layoutY="113.0" mnemonicParsing="false" onAction="#filter" text="Filter" />
