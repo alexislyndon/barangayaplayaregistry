@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<TitledPane prefHeight="405.0" prefWidth="642.0" text="New Resident" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.CreateResidentController">
+<TitledPane prefHeight="405.0" prefWidth="642.0" text="NON Resident" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.CreateNONResidentController">
    <content>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -203,43 +203,14 @@
                                 <FXCollections fx:factory="observableArrayList">
                                       <String fx:value="Roman Catholic" />
                                       <String fx:value="Islam" />
-                                      <String fx:value="Born Again" />
+                                      <String fx:value="Protestant" />
                                 </FXCollections>
                             </items>
                         </ComboBox>
                         <Label fx:id="lblreligion" layoutX="360.0" layoutY="211.0" text="Religion" />
-                        <VBox layoutX="28.0" layoutY="314.0" prefHeight="65.0" prefWidth="232.0">
+                        <VBox layoutX="28.0" layoutY="272.0" prefHeight="147.0" prefWidth="232.0">
                            <children>
                               <HBox>
-                                 <children>
-                                    <Label fx:id="lblhouse" prefHeight="25.0" prefWidth="53.0" text="House #">
-                                       <HBox.margin>
-                                          <Insets right="20.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <TextField fx:id="housenumber" promptText="enter house number">
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </TextField>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox>
-                                 <children>
-                                    <Label fx:id="lblstreet" prefHeight="25.0" prefWidth="55.0" text="Street">
-                                       <HBox.margin>
-                                          <Insets right="20.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <TextField fx:id="street" promptText="enter street">
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </TextField>
-                                 </children>
                                  <VBox.margin>
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
@@ -249,9 +220,16 @@
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
                               </HBox>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label text="Address" />
+                              <TextArea fx:id="address" prefHeight="200.0" prefWidth="200.0" promptText="enter address here" />
                            </children>
                         </VBox>
-                        <VBox layoutX="340.0" layoutY="310.0">
+                        <VBox layoutX="337.0" layoutY="290.0">
                            <children>
                               <HBox>
                                  <children>
@@ -277,7 +255,7 @@
                                           <Insets right="20.0" />
                                        </HBox.margin>
                                     </CheckBox>
-                                    <DatePicker fx:id="duedate" disable="true" />
+                                    <DatePicker fx:id="duedate" disable="true" promptText="duedate" />
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="15.0" />
@@ -290,12 +268,12 @@
                               </CheckBox>
                            </children>
                         </VBox>
-                        <Button fx:id="btnsave" layoutX="569.0" layoutY="411.0" mnemonicParsing="false" onAction="#saveresident" text="SAVE!" />
+                        <Button fx:id="btnsave" layoutX="488.0" layoutY="411.0" mnemonicParsing="false" onAction="#saveresident" prefHeight="25.0" prefWidth="129.0" text="SAVE Non-resident" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Family Background">
+          <Tab disable="true" text="Family Background">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -397,7 +375,7 @@
                      </children></AnchorPane>
             </content>
           </Tab>
-            <Tab text="Related Info &amp; Contact">
+            <Tab disable="true" text="Related Info &amp; Contact">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -426,7 +404,7 @@
                      </children></AnchorPane>
                </content>
             </Tab>
-            <Tab text="Other">
+            <Tab disable="true" text="Other">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

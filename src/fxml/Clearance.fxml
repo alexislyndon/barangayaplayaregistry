@@ -1,108 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barangay.ClearanceController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.ClearanceController">
    <children>
-      <TitledPane animated="false" prefHeight="639.0" prefWidth="417.0" style="-fx-background-color: #4d4d4d;" text="Barangay Clearance" />
-      <Pane layoutX="-1.0" layoutY="10.0" prefHeight="640.0" prefWidth="428.0">
+      <TitledPane animated="false" prefHeight="583.0" prefWidth="417.0" style="-fx-background-color: #4d4d4d;" text="Barangay Clearance" />
+      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="583.0" prefWidth="417.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="27.0" prefHeight="63.0" prefWidth="417.0" text="Issuing Barangay Clearance">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="27.0" prefHeight="63.0" prefWidth="417.0" text="Barangay Clearance">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <VBox layoutX="30.0" layoutY="109.0" prefHeight="312.0" prefWidth="113.0">
+            <VBox layoutX="56.0" layoutY="119.0" prefHeight="235.0" prefWidth="113.0" spacing="10.0">
                <children>
-                  <Label prefHeight="34.0" prefWidth="113.0" text="Clearance Number:">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label layoutX="10.0" layoutY="78.0" prefHeight="34.0" prefWidth="113.0" text="Issued by:">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label layoutX="10.0" layoutY="147.0" prefHeight="34.0" prefWidth="113.0" text="OR Number:">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label layoutX="10.0" layoutY="254.0" prefHeight="34.0" prefWidth="113.0" text="Receipt Amount:">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
                   <Label layoutX="10.0" layoutY="186.0" prefHeight="34.0" prefWidth="113.0" text="Status:">
                      <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
                   <Label layoutX="10.0" layoutY="220.0" prefHeight="34.0" prefWidth="113.0" text="Findings:">
                      <VBox.margin>
-                        <Insets bottom="5.0" top="13.0" />
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
                   <Label layoutX="10.0" layoutY="288.0" prefHeight="34.0" prefWidth="113.0" text="Remarks:">
                      <VBox.margin>
-                        <Insets bottom="5.0" top="13.0" />
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Signed By:">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
                </children>
             </VBox>
             <VBox layoutX="169.0" layoutY="167.0" prefHeight="79.0" prefWidth="223.0" />
-            <Line endX="414.5" layoutX="8.0" layoutY="468.0" startX="-14.0" stroke="#4d4d4d" />
-            <VBox layoutX="169.0" layoutY="99.0" prefHeight="347.0" prefWidth="223.0">
+            <Line endX="414.5" layoutX="8.0" layoutY="381.0" startX="-14.0" stroke="#4d4d4d" />
+            <VBox layoutX="170.0" layoutY="114.0" prefHeight="257.0" prefWidth="223.0" spacing="10.0">
                <children>
-                  <TextField fx:id="clearance_no" prefHeight="34.0" prefWidth="212.0">
+                  <TextField fx:id="status" layoutX="10.0" layoutY="220.0" prefHeight="35.0" prefWidth="223.0" promptText="enter status">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="issuedby" layoutX="10.0" layoutY="88.0" prefHeight="34.0" prefWidth="212.0">
+                  <TextField fx:id="findings" layoutX="10.0" layoutY="254.0" prefHeight="50.0" prefWidth="223.0" promptText="enter any findings">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="ORnum" layoutX="10.0" layoutY="147.0" prefHeight="34.0" prefWidth="212.0">
+                  <TextField fx:id="remarks" layoutX="10.0" layoutY="212.0" prefHeight="50.0" prefWidth="223.0" promptText="enter remarks">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="amount" layoutX="10.0" layoutY="186.0" prefHeight="34.0" prefWidth="212.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="status" layoutX="10.0" layoutY="220.0" prefHeight="35.0" prefWidth="223.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="findings" layoutX="10.0" layoutY="254.0" prefHeight="50.0" prefWidth="223.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="remarks" layoutX="10.0" layoutY="212.0" prefHeight="50.0" prefWidth="223.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
+                  <HBox>
+                     <children>
+                        <ComboBox fx:id="signatory" prefHeight="33.0" prefWidth="222.0" promptText="choose signatory">
+                            <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Captain" />
+                                            <String fx:value="Kagawad 1" />
+                                            <String fx:value="Kagawad 2" />
+                                            <String fx:value="Kagawad 3" />
+                                            <String fx:value="Kagawad 4" />
+                                            <String fx:value="Kagawad 5" />
+                                            <String fx:value="Kagawad 6" />
+                                            <String fx:value="Kagawad 7" />
+                                      </FXCollections>
+                                  </items>
+                        </ComboBox>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
-            <VBox layoutX="30.0" layoutY="509.0" prefHeight="96.0" prefWidth="113.0">
+            <VBox layoutX="30.0" layoutY="438.0" prefHeight="96.0" prefWidth="113.0">
                <children>
                   <Label prefHeight="34.0" prefWidth="113.0" text="Applicant:">
                      <VBox.margin>
@@ -119,25 +105,33 @@
                   <Insets bottom="5.0" top="5.0" />
                </padding>
             </VBox>
-            <Label layoutX="30.0" layoutY="65.0" prefHeight="34.0" prefWidth="113.0" text="Clearance Details" underline="true" />
-            <Label layoutX="30.0" layoutY="475.0" prefHeight="34.0" prefWidth="113.0" text="Applicant Details" underline="true" />
-            <VBox layoutX="169.0" layoutY="509.0" prefHeight="96.0" prefWidth="223.0">
+            <Label layoutX="31.0" layoutY="79.0" prefHeight="34.0" prefWidth="113.0" text="Clearance Details" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="30.0" layoutY="407.0" prefHeight="34.0" prefWidth="113.0" text="Applicant Details" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <VBox layoutX="169.0" layoutY="438.0" prefHeight="96.0" prefWidth="223.0">
                <children>
-                  <TextField fx:id="applicant" editable="false" layoutX="10.0" layoutY="88.0" prefHeight="34.0" prefWidth="212.0">
+                  <TextField fx:id="applicant" editable="false" layoutX="10.0" layoutY="88.0" prefHeight="34.0" prefWidth="212.0" promptText="Applicant Name will appear here">
                      <VBox.margin>
                         <Insets bottom="5.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="purpose" prefHeight="49.0" prefWidth="223.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" top="5.0" />
-                     </VBox.margin>
-                  </TextField>
+                  <ComboBox fx:id="purpose" editable="true" prefHeight="33.0" prefWidth="247.0" promptText="enter purpose" >
+                      <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Employment" />
+                                      </FXCollections>
+                                  </items>
+                  </ComboBox>
                </children>
             </VBox>
-            <Button layoutX="14.0" layoutY="593.0" mnemonicParsing="false" onAction="#saveclear" text="SAVE!" />
-            <Label layoutX="169.0" layoutY="484.0" text="Applicant id:" />
-            <Text fx:id="id" layoutX="245.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Button layoutX="328.0" layoutY="534.0" mnemonicParsing="false" onAction="#saveclear" prefHeight="32.0" prefWidth="64.0" text="SAVE!" />
+            <Label layoutX="281.0" layoutY="416.0" text="Applicant id:" textFill="RED" />
+            <Label fx:id="id" layoutX="365.0" layoutY="416.0" text="Label" textFill="RED" />
          </children>
       </Pane>
    </children>

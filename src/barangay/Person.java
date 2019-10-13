@@ -45,7 +45,7 @@ public class Person {
         return id;
     }
     private final StringProperty last = new SimpleStringProperty();
-
+    
     /**
      *
      * @return

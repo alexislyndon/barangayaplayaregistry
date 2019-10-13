@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -18,13 +19,13 @@ import javafx.stage.Stage;
 public class Barangay extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(final Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Barangay Registry of Aplaya");
-        stage.setScene(scene);
-        stage.centerOnScreen();
-        stage.show();
+        primaryStage.setTitle("Barangay Registry of Aplaya");
+        primaryStage.setScene(scene);
+        primaryStage.centerOnScreen();
+        primaryStage.show();
     }
 
     /**

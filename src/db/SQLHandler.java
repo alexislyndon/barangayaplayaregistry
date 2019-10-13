@@ -5,7 +5,6 @@
  */
 package db;
 
-import barangay.MySQLConnector;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -46,8 +45,8 @@ public class SQLHandler {
     
     /**
      *
-     * @param query
-     * @param params
+     * @param tablename
+     * @param where
      * @return
      * @throws SQLException
      */
